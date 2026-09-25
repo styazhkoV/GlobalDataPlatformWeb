@@ -1,0 +1,164 @@
+@{
+    ViewData["Title"] = "Стяжков Александр — Senior Architect & Analyst";
+    var errorMessage = TempData["ErrorMessage"] as string;
+}
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+            <strong>Ошибка входа:</strong> @errorMessage
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Hero-секция с приветствием -->
+    <div class="p-5 mb-4 bg-light rounded-3 border shadow-sm">
+        <div class="container-fluid py-2">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-primary fs-6 px-3 py-2">Senior System & Business Analyst / Solution Architect</span>
+                <span class="text-muted"><i class="bi bi-geo-alt"></i> Алматы, Казахстан</span>
+            </div>
+            <h1 class="display-5 fw-bold text-dark">Стяжков Александр Андреевич</h1>
+            <p class="col-md-10 fs-5 text-secondary mt-3">
+                Добро пожаловать в демонстрационную платформу управления государственными данными и матрицей доступа RBAC. 
+                Проект создан для демонстрации архитектуры интеграций, разграничения ролевого доступа и работы с чувствительными ПДн.
+            </p>
+            
+            <!-- Кнопка вызова модального окна авторизации -->
+            <button type="button" class="btn btn-primary btn-lg mt-2 shadow" data-bs-toggle="modal" data-bs-target="#authModal">
+                🔑 Авторизоваться в системе
+            </button>
+        </div>
+    </div>
+
+    <!-- Ключевые компетенции -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary fw-bold">Анализ и Проектирование</h5>
+                    <p class="card-text text-muted">BPMN 2.0, UML, IDEF0, проектирование REST API (OpenAPI / Swagger), ERD-диаграммы, спецификации СДБО ЮЛ и CRM.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary fw-bold">Разработка и Стек</h5>
+                    <p class="card-text text-muted">C# / .NET 8, Java Spring Boot, TypeScript, React, Astro, SQL (PostgreSQL, Oracle DB, MSSQL), REST & Microservices.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary fw-bold">AI и Интеграции</h5>
+                    <p class="card-text text-muted">Локальные LLM (Ollama, DeepSeek, Qwen), интеграция MCP-серверов, автоматизация рабочих процессов.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Реестр проектов -->
+    <h3 class="fw-bold mb-3">Портфолио проектов</h3>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="card-title fw-bold text-dark mb-0">Корпоративный Банкинг (СДБО ЮЛ)</h5>
+                        <span class="badge bg-secondary">FinTech</span>
+                    </div>
+                    <p class="card-text text-muted small">
+                        Рефакторинг системных логов, оптимизация бизнес-процессов дистанционного банковского обслуживания юридических лиц и внедрение новых модулей.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="card-title fw-bold text-dark mb-0">SapaCRM (Kcell Integration)</h5>
+                        <span class="badge bg-info text-dark">Enterprise B2B/B2C</span>
+                    </div>
+                    <p class="card-text text-muted small">
+                        Проектирование OpenAPI контрактов, лид-модулей, маппинг структур данных и интеграция CRM-решений для телеком-оператора.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="card-title fw-bold text-dark mb-0">Syrlas AI — Offline Desktop Advisor</h5>
+                        <span class="badge bg-success">AI / .NET 8 + React</span>
+                    </div>
+                    <p class="card-text text-muted small">
+                        Автономный настольный ИИ-ассистент с локальной обработкой данных, архитектурой на C# .NET 8 и современным интерфейсом на React.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="card-title fw-bold text-dark mb-0">Rossette & Web Services</h5>
+                        <span class="badge bg-dark">Electron / Open Source</span>
+                    </div>
+                    <p class="card-text text-muted small">
+                        Разработка Open-Source приложений на Electron, промо-платформ на Astro и сервисов автоматизации взаимодействия клиентов.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Модальное окно авторизации и выбора роли -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title fw-bold" id="authModalLabel">Авторизация и Выбор Роли</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-controller="Home" asp-action="Login" method="post">
+                <div class="modal-body">
+                    <p class="text-muted small mb-3">Выберите целевую роль и введите пароль доступа к реестру субъектов.</p>
+                    
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Роль в системе:</label>
+                        <select name="selectedRole" class="form-select border-primary">
+                            <option value="Security_Officer">Офицер безопасности (КНБ)</option>
+                            <option value="Financial_Auditor">Финансовый аудитор (Минфин)</option>
+                            <option value="Agro_Inspector">Инспектор АПК (Минсельхоз)</option>
+                            <option value="System_Admin">Администратор системы</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Пароль подтверждения роли:</label>
+                        <input type="password" name="password" class="form-control" placeholder="Введите пароль..." required />
+                        <div class="form-text mt-2 bg-light p-2 rounded">
+                            <small class="d-block text-secondary"><strong>Подсказка паролей для теста:</strong></small>
+                            <small class="d-block">КНБ: <code>knb2026</code> | Минфин: <code>fin2026</code></small>
+                            <small class="d-block">Минсельхоз: <code>agro2026</code> | Админ: <code>admin123</code></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary fw-bold">Войти в реестр</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
